@@ -150,7 +150,7 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
             if (versionNamePrefab == null) return;
 
             var versionNameObject = Instantiate(versionNamePrefab, transform);
-            versionNameObject.transform.localPosition = new Vector3(position, 0.1f, 0);
+            versionNameObject.transform.localPosition = new Vector3(position, 0.005f, 0);
             versionNameObject.name = versionName;
             EditorUtility.SetDirty(versionNameObject.transform);
             var textMesh = versionNameObject.GetComponentInChildren<TextMeshPro>();
