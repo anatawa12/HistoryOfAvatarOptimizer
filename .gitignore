@@ -1,0 +1,17 @@
+# Unity per-user files
+/Library/
+/Temp/
+/UserSettings/
+/Logs/
+# Unity-plugin generated files
+/obj
+/bin
+/*.csproj
+/*.sln
+# crash reports
+mono_crash.*
+# VRChat Package Manager
+/Packages/*/
+# Udon
+/Assets/SerializedUdonPrograms/
+# Note: Editor specific files are not included here, you should add to `$GIT_DIR/info/exclude` instead.
