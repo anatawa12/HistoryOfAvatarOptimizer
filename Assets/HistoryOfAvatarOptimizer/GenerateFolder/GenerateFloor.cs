@@ -117,6 +117,8 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
                     new Vector3(end, 0, -width / 2),
                     new Vector3(end, 0, +width / 2),
                     color);
+                
+                AddText(prevVersionName, (lastBegin + lastEnd + end + end) / 4);
             }
 
             // create mesh
