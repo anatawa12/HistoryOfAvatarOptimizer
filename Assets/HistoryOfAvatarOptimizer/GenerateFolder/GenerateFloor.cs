@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.Build.Reporting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Object = UnityEngine.Object;
 
 #if UNITY_EDITOR
+using UnityEditor.Build.Reporting;
 using TMPro;
 using UnityEditor.Build;
 #endif
