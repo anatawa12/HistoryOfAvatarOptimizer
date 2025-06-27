@@ -8,6 +8,9 @@
     },
     "com.anatawa12.apple-silicon-harmony": {
       "version": "0.1.0"
+    },
+    "net.narazaka.vrchat.tmp-fallback-fonts-jp": {
+      "version": "1.0.2"
     }
   },
   "locked": {
@@ -29,6 +32,10 @@
     },
     "com.anatawa12.apple-silicon-harmony": {
       "version": "0.1.0",
+      "dependencies": {}
+    },
+    "net.narazaka.vrchat.tmp-fallback-fonts-jp": {
+      "version": "1.0.2",
       "dependencies": {}
     }
   }
