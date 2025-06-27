@@ -11,6 +11,9 @@
     },
     "net.narazaka.vrchat.tmp-fallback-fonts-jp": {
       "version": "1.0.2"
+    },
+    "la.niri.videoplayer": {
+      "version": "2.5.5"
     }
   },
   "locked": {
@@ -37,6 +40,12 @@
     "net.narazaka.vrchat.tmp-fallback-fonts-jp": {
       "version": "1.0.2",
       "dependencies": {}
+    },
+    "la.niri.videoplayer": {
+      "version": "2.5.5",
+      "dependencies": {
+        "com.vrchat.udonsharp": "^1.1.9"
+      }
     }
   }
 }
