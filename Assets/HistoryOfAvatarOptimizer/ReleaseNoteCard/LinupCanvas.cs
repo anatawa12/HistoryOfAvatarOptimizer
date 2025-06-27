@@ -19,8 +19,6 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
             float leftYPosition = 0;
             float rightYPosition = 0;
 
-            var left = false;
-
             var childCount = transform.childCount;
             for (var i = 0; i < childCount; i++)
             {
@@ -32,7 +30,7 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
                     lastZ = child.localPosition.z;
                 }
 
-                left = !left;
+                var left = leftYPosition <= rightYPosition;
 
                 var canvas = (RectTransform)child.GetChild(0);
                 var element = (RectTransform)canvas.GetChild(0);

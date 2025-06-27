@@ -1283,7 +1283,7 @@ MonoBehaviour:
   width: 1
   dayLength: 0.02
   shader: {fileID: 4800000, guid: 9fa1fc1a289be4ed38832e1a76a60d21, type: 3}
-  versionNamePrefab: {fileID: 7318762900322613258, guid: 98b3025213b84441b953611d2048ac3e, type: 3}
+  versionNamePrefab: {fileID: 1879413053542211687, guid: b14ff6145f53f4db7b7313e859144be1, type: 3}
 --- !u!4 &1038306389
 Transform:
   m_ObjectHideFlags: 0
@@ -1620,7 +1620,7 @@ MonoBehaviour:
   width: 1
   dayLength: 0.02
   shader: {fileID: 4800000, guid: 9fa1fc1a289be4ed38832e1a76a60d21, type: 3}
-  versionNamePrefab: {fileID: 7318762900322613258, guid: 98b3025213b84441b953611d2048ac3e, type: 3}
+  versionNamePrefab: {fileID: 1879413053542211687, guid: b14ff6145f53f4db7b7313e859144be1, type: 3}
 --- !u!1 &1197319510 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2998405103204001567, guid: 2674f268860583949b53b63df24489ea, type: 3}
