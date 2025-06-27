@@ -44,10 +44,11 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
                 canvasSize.y = height;
                 canvas.sizeDelta = canvasSize;
 
-                var canvasPosition = canvas.position;
+                var canvasPosition = canvas.localPosition;
                 canvasPosition.y += left ? leftYPosition : rightYPosition;
                 canvasPosition.x = left ? -width : width;
-                canvas.position = canvasPosition;
+                canvas.localPosition = canvasPosition;
+                
                 canvas.Rotate(Vector3.up, left ? 40 : 180 - 40);
 
                 if (left)
