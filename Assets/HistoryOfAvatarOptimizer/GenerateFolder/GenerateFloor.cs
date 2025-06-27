@@ -8,6 +8,7 @@ using Object = UnityEngine.Object;
 #if UNITY_EDITOR
 using UnityEditor.Build.Reporting;
 using TMPro;
+using UnityEditor;
 using UnityEditor.Build;
 #endif
 
@@ -148,6 +149,7 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
 
             var versionNameObject = Instantiate(versionNamePrefab, transform);
             versionNameObject.transform.localPosition = new Vector3(position, 0.1f, 0);
+            EditorUtility.SetDirty(versionNameObject.transform);
             var textMesh = versionNameObject.GetComponentInChildren<TextMeshPro>();
             textMesh.text = versionName;
         }
