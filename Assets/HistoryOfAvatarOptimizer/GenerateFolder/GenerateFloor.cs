@@ -218,7 +218,7 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
                 eventObject.transform.localPosition = new Vector3(position, 0.005f, 0);
                 eventObject.name = eventInfo.message;
                 var textMesh = eventObject.GetComponentInChildren<TMP_Text>();
-                textMesh.text = $"{eventInfo.message}";
+                textMesh.text = $"{eventInfo.message}\n{dateTime:yyyy/MM/dd}";
             }
         }
 
