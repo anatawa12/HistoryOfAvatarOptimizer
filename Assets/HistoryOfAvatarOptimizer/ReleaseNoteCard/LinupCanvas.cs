@@ -39,6 +39,15 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
 
                 var height = element.sizeDelta.y;
                 var canvasSize = canvas.sizeDelta;
+                if (height > 6000)
+                {
+                    canvas.pivot = left ? new Vector2(0.75f, 0) : new Vector2(0.25f, 0);
+                    canvasSize.x *= 2;
+                    canvas.sizeDelta = canvasSize;
+                    canvas.gameObject.SetActive(false);
+                    canvas.gameObject.SetActive(true);
+                    height = element.sizeDelta.y;
+                }
                 canvasSize.y = height;
                 canvas.sizeDelta = canvasSize;
 
