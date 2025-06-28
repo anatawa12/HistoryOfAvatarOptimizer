@@ -125,7 +125,7 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
 
                         // create list item
                         var li = Instantiate(liTemplate, currentLevelList).GetComponentInChildren<TextMeshProUGUI>();
-                        li.text = StripMarkdownLinks(line.Substring(level + 1).Trim());
+                        li.text = ApplyReplacements(StripMarkdownLinks(line.Substring(level + 1).Trim()));
                         listParentLevels[level] = li.transform.parent;
                     }
                 }
@@ -153,6 +153,13 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
                     .GetComponent<RectTransform>().GetChild(0)).sizeDelta.y;
                 Debug.Log($"height: {height}");
             }
+        }
+
+        private string ApplyReplacements(string line)
+        {
+            line = line.Replace("renamed to `Trace And Optimize`", "renamed to <color=red>`Trace And Optimize`</color>");
+            line = line.Replace("only 3 hours", "<color=red>only 3 hours</color>");
+            return line;
         }
 
         private Regex _markdownLinkRegex;
