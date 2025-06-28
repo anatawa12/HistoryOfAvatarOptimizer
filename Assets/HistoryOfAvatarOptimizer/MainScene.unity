@@ -2507,6 +2507,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2998405103435114358, guid: 2674f268860583949b53b63df24489ea, type: 3}
   m_PrefabInstance: {fileID: 1383481057}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1708587133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2747146796163972461, guid: dfcff77d2cc1048cd9ee3af21601d2d0, type: 3}
+  m_PrefabInstance: {fileID: 386718421}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1719207708 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2998405104528502916, guid: 2674f268860583949b53b63df24489ea, type: 3}
@@ -2821,6 +2826,11 @@ GameObject:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2310637536146018223, guid: 2674f268860583949b53b63df24489ea, type: 3}
   m_PrefabInstance: {fileID: 1383481057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1898638819 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2747146796163972461, guid: dfcff77d2cc1048cd9ee3af21601d2d0, type: 3}
+  m_PrefabInstance: {fileID: 3216948939963099607}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1921461317
 GameObject:
@@ -3861,11 +3871,11 @@ MonoBehaviour:
     ID: 141
     SerializedTypeNames:
     - VRC.Udon.UdonBehaviour
-  - gameObject: {fileID: 0}
+  - gameObject: {fileID: 1898638819}
     ID: 142
     SerializedTypeNames:
     - VRC.Udon.UdonBehaviour
-  - gameObject: {fileID: 0}
+  - gameObject: {fileID: 1708587133}
     ID: 143
     SerializedTypeNames:
     - VRC.Udon.UdonBehaviour

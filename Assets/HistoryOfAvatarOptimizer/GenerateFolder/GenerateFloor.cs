@@ -26,6 +26,14 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
         public GameObject versionNamePrefab;
         public GameObject datePrefab;
         public GameObject eventsPrefab;
+        public EventInfo[] events;
+
+        [Serializable]
+        public struct EventInfo
+        {
+            public string date;
+            public string message;
+        }
 
 #if UNITY_EDITOR
         class Processor : IProcessSceneWithReport
@@ -37,6 +45,7 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
                 {
                     generateFloor.Generate();
                     generateFloor.GenerateDates();
+                    generateFloor.GenerateEvents();
                     Object.DestroyImmediate(generateFloor);
                 }
             }
@@ -171,6 +180,22 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
                 textMesh.text = $"{dateName}";
                 
                 currentDate = currentDate.AddMonths(1);
+            }
+        }
+
+        private void GenerateEvents()
+        {
+            var epoc = DateTime.Parse(epocDate);
+            foreach (var eventInfo in events)
+            {
+                var dateTime = DateTime.Parse(eventInfo.date);
+                var position = (float)(dateTime - epoc).TotalDays * dayLength;
+
+                var eventObject = Instantiate(eventsPrefab, transform);
+                eventObject.transform.localPosition = new Vector3(position, 0.005f, 0);
+                eventObject.name = eventInfo.message;
+                var textMesh = eventObject.GetComponentInChildren<TMP_Text>();
+                textMesh.text = $"{eventInfo.message}";
             }
         }
 

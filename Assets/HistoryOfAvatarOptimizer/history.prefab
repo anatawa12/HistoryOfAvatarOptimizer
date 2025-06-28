@@ -55,6 +55,13 @@ MonoBehaviour:
   versionNamePrefab: {fileID: 1879413053542211687, guid: b14ff6145f53f4db7b7313e859144be1, type: 3}
   datePrefab: {fileID: 8596392139517586003, guid: 95522a11778a04758a883d7b0a65b063, type: 3}
   eventsPrefab: {fileID: 7059667331158129270, guid: c9cb3f51e2083407f9a9adb0b4fabf60, type: 3}
+  events:
+  - date: 2022-12-27T20:17:02+0900
+    message: Initial Commit
+  - date: 2023-08-12T13:34:29+0000
+    message: Trace and Optimize!
+  - date: 2023-06-27T04:19:00+0000
+    message: First Stable Release!
 --- !u!1 &1957719791113622350
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7059667331158129270, guid: c9cb3f51e2083407f9a9adb0b4fabf60, type: 3}
       propertyPath: m_Name
-      value: Events
+      value: Today
       objectReference: {fileID: 0}
     - target: {fileID: 8845425141294543140, guid: c9cb3f51e2083407f9a9adb0b4fabf60, type: 3}
       propertyPath: m_text
