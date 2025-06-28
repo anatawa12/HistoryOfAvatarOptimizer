@@ -48,6 +48,7 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
                 canvas.localPosition = canvasPosition;
                 
                 canvas.Rotate(Vector3.up, left ? 40 : 180 - 40);
+                canvas.Translate(0, 0, -0.005f, Space.Self);
 
                 if (left)
                 {
@@ -59,11 +60,14 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
                     position.x = -position.x;
                     verticalCylinder.localPosition = position;
 
-                    verticalCylinder.localScale = new Vector3(1, 1 + leftYPosition, 1);
+                    var poleHeight = 1 + leftYPosition + height * scale * 0.5f;
+
+                    verticalCylinder.localScale = new Vector3(1, poleHeight, 1);
                 }
                 else
                 {
-                    verticalCylinder.localScale = new Vector3(1, 1 + rightYPosition, 1);
+                    var poleHeight = 1 + rightYPosition + height * scale * 0.5f;
+                    verticalCylinder.localScale = new Vector3(1, poleHeight, 1);
                 }
 
                 if (left) leftYPosition += (height + space) * scale;
