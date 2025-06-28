@@ -164,7 +164,7 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
                 var dateName = currentDate.ToString("yyyy/MM/dd");
 
                 var dateObject = Instantiate(datePrefab, transform);
-                dateObject.transform.localPosition = new Vector3(position, 0.01f, 0);
+                dateObject.transform.localPosition = new Vector3(position, 0, 0);
                 dateObject.name = dateName;
                 EditorUtility.SetDirty(dateObject.transform);
                 var textMesh = dateObject.GetComponentInChildren<TMP_Text>();
