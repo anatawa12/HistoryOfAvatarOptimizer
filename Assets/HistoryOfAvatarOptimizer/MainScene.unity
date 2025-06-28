@@ -984,6 +984,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2998405103720325211, guid: 2674f268860583949b53b63df24489ea, type: 3}
   m_PrefabInstance: {fileID: 1383481057}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &832939522 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3507086291085782344, guid: dfcff77d2cc1048cd9ee3af21601d2d0, type: 3}
+  m_PrefabInstance: {fileID: 386718421}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &838279937 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2998405103623723185, guid: 2674f268860583949b53b63df24489ea, type: 3}
@@ -3868,6 +3873,10 @@ MonoBehaviour:
     - VRC.Udon.UdonBehaviour
   - gameObject: {fileID: 434465396}
     ID: 142
+    SerializedTypeNames:
+    - VRC.Udon.UdonBehaviour
+  - gameObject: {fileID: 832939522}
+    ID: 143
     SerializedTypeNames:
     - VRC.Udon.UdonBehaviour
   portraitCameraPositionOffset: {x: 0, y: 0, z: 0}

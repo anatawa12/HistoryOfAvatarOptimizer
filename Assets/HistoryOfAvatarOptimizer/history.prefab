@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textAsset: {fileID: 4900000, guid: 0e0efc0eb38346369e06ed6664617941, type: 3}
   beginDate: 2022-12-27
-  endDate: 2025-06-27
+  endDate: 2025-07-27
   epocDate: 2023-06-27
   width: 1
   dayLength: 0.02
