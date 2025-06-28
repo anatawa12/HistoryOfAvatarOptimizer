@@ -56,12 +56,30 @@ MonoBehaviour:
   datePrefab: {fileID: 8596392139517586003, guid: 95522a11778a04758a883d7b0a65b063, type: 3}
   eventsPrefab: {fileID: 7059667331158129270, guid: c9cb3f51e2083407f9a9adb0b4fabf60, type: 3}
   events:
-  - date: 2022-12-27T20:17:02+0900
-    message: Initial Commit
-  - date: 2023-08-12T13:34:29+0000
-    message: Trace and Optimize!
-  - date: 2023-06-27T04:19:00+0000
-    message: First Stable Release!
+  - message: Initial Commit
+    date: 2022-12-27T20:17:02+0900
+  - message: Trace and Optimize!
+    date: 2023-08-12T13:34:29+0000
+  - message: First Stable Release!
+    date: 2023-06-27T04:19:00+0000
+  - message: 'The day I decided
+
+      to create ALCOM'
+    date: 2023-12-09T12:10:35+0000
+  - message: NDMF 1.0.0
+    date: 2023-09-24T07:37:14Z
+  - message: Modular Avatar 1.0.0
+    date: 2022-11-27T21:55:45Z
+  - message: ALCOM 1.0.0
+    date: 2025-01-01T04:32:07Z
+  - message: VCC 1.0.0
+    date: 2022-08-30
+  - message: VCC 2.0.0
+    date: 2023-03-09
+  - message: 'VCC 2.1.0
+
+      Community Repos'
+    date: 2023-04-06
 --- !u!1 &1957719791113622350
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,6 +237,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4699159259044102417, guid: c9cb3f51e2083407f9a9adb0b4fabf60, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5759692501214421030, guid: c9cb3f51e2083407f9a9adb0b4fabf60, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -257,6 +279,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5759692501214421030, guid: c9cb3f51e2083407f9a9adb0b4fabf60, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418759594920896194, guid: c9cb3f51e2083407f9a9adb0b4fabf60, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418759594920896194, guid: c9cb3f51e2083407f9a9adb0b4fabf60, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418759594920896194, guid: c9cb3f51e2083407f9a9adb0b4fabf60, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418759594920896194, guid: c9cb3f51e2083407f9a9adb0b4fabf60, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418759594920896194, guid: c9cb3f51e2083407f9a9adb0b4fabf60, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6418759594920896194, guid: c9cb3f51e2083407f9a9adb0b4fabf60, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7059667331158129270, guid: c9cb3f51e2083407f9a9adb0b4fabf60, type: 3}

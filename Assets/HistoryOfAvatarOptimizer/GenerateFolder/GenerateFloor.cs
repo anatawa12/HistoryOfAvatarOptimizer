@@ -31,8 +31,9 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
         [Serializable]
         public struct EventInfo
         {
-            public string date;
+            [Multiline]
             public string message;
+            public string date;
         }
 
 #if UNITY_EDITOR
