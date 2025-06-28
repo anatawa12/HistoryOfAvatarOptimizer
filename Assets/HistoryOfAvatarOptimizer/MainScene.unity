@@ -2276,6 +2276,14 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2292020553100792849, guid: 2de6d3bc416a2f143bd454d863308b0c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.135
+      objectReference: {fileID: 0}
+    - target: {fileID: 2292020553100792849, guid: 2de6d3bc416a2f143bd454d863308b0c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2292020553524072827, guid: 2de6d3bc416a2f143bd454d863308b0c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

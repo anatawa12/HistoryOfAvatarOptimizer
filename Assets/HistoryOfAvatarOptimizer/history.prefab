@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4283fb0205748e88424b11912670125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textAsset: {fileID: 4900000, guid: 0e0efc0eb38346369e06ed6664617941, type: 3}
+  tagsAsset: {fileID: 4900000, guid: e48f19693a03747559861b2a386d0e15, type: 3}
   beginDate: 2022-12-27
   endDate: 2025-07-27
   epocDate: 2023-06-27

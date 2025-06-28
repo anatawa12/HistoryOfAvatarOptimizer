@@ -16,7 +16,7 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
 {
     public class GenerateFloor : MonoBehaviour
     {
-        public TextAsset textAsset;
+        public TextAsset tagsAsset;
         public string beginDate = "2022-12-27";
         public string endDate = "2025-06-27";
         public string epocDate = "2023-06-27";
@@ -52,20 +52,42 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
             }
         }
 
+        private List<(string name, DateTime begin, DateTime end)> ParseFile()
+        {
+            var minDates = new Dictionary<string, DateTime>();
+            var maxDates = new Dictionary<string, DateTime>();
+            var channelNames = new List<string>();
+
+            foreach (var (date, tagName) in GenerateReleaseNoteCardSettings.ParseTagsText(tagsAsset.text))
+            {
+                // tagName is 0.1.0 etc or 0.1.0-alpha.1 etc
+                var releaseChannel = tagName;
+                releaseChannel = releaseChannel.Trim();
+                if (releaseChannel.Contains('-')) releaseChannel = releaseChannel.Substring(0, releaseChannel.IndexOf('-'));
+                releaseChannel = releaseChannel.Substring(0, releaseChannel.LastIndexOf('.'));
+
+                if (!minDates.ContainsKey(releaseChannel) || date < minDates[releaseChannel]) minDates[releaseChannel] = date;
+                if (!maxDates.ContainsKey(releaseChannel) || date > maxDates[releaseChannel]) maxDates[releaseChannel] = date;
+                if (!channelNames.Contains(releaseChannel)) channelNames.Add(releaseChannel);
+            }
+
+            var result = new List<(string name, DateTime begin, DateTime end)>();
+            var prevChannelName = channelNames[0];
+            foreach (var channelName in channelNames.Skip(1))
+            {
+                var beginDate = minDates[channelName];
+                var endDate = maxDates[prevChannelName];
+                if (endDate < beginDate) endDate = beginDate;
+                result.Add((channelName + ".x", beginDate, endDate));
+                prevChannelName = channelName;
+            }
+         
+            return result;
+        }
+
         private void Generate()
         {
-            var lines = new List<(string name, DateTime begin, DateTime end)>();
-            foreach (var line in textAsset.text.Split('\n'))
-            {
-                if (line.StartsWith('#')) continue;
-                var trim = line.Trim();
-                var parts = trim.Split(' ');
-                if (parts.Length < 3) continue;
-                var name = parts[0];
-                var begin = DateTime.Parse(parts[1]);
-                var end = DateTime.Parse(parts[2]);
-                lines.Add((name, begin, end));
-            }
+            var lines = ParseFile();
 
             var epoc = DateTime.Parse(epocDate);
             var lastBegin = (float)(DateTime.Parse(beginDate) - epoc).TotalDays * dayLength;

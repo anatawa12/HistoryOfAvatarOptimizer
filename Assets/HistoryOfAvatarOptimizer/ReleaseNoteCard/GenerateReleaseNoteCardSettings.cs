@@ -39,6 +39,26 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
             public string name;
         }
 
+        public static List<(DateTime, string)> ParseTagsText(string tags)
+        {
+            var result = new List<(DateTime, string)>();
+            foreach (var line in tags.Split('\n'))
+            {
+                var tokens = line.Split(new[] { ' ' }, 2);
+                if (tokens.Length < 2) continue;
+                var date = tokens[0];
+                var versionName = tokens[1].Trim();
+                // remove leading 'v' if present
+                if (versionName.StartsWith("v")) versionName = versionName.Substring(1);
+                var dateTime = DateTime.Parse(date);
+
+                result.Add((dateTime, versionName));
+            }
+            result.Sort((a, b) => a.Item1.CompareTo(b.Item1));
+
+            return result;
+        }
+
         public void Generate()
         {
             var text = releaseNote.text;
@@ -131,20 +151,10 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
                 }
             }
 
-            foreach (var line in tagsNote.text.Split('\n'))
+            foreach (var (dateTime, versionName) in ParseTagsText(tagsNote.text))
             {
-                var tokens = line.Split(new[] { ' ' }, 2);
-                if (tokens.Length < 2) continue;
-                var date = tokens[0];
-                var versionName = tokens[1].Trim();
-                // remove leading 'v' if present
-                if (versionName.StartsWith("v")) versionName = versionName.Substring(1);
-                var dateTime = DateTime.Parse(date);
-
                 if (!versions.TryGetValue(versionName, out var versionInfo)) continue;
                 var daysSinceEpic = (dateTime - epocDate).TotalDays;
-
-                Debug.Log($"{versionInfo.name}: {dateTime}, {date}, {daysSinceEpic}");
 
                 versionInfo.versionField.text = $"{versionName} - {dateTime:yyyy-MM-dd}";
                 versionInfo.rootObject.transform.localPosition = new Vector3(0, 0, (float)(daysSinceEpic * lengthPerDay));
