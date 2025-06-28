@@ -24,6 +24,8 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
         public float dayLength = 0.02f;
         public Shader shader;
         public GameObject versionNamePrefab;
+        public GameObject datePrefab;
+        public GameObject eventsPrefab;
 
 #if UNITY_EDITOR
         class Processor : IProcessSceneWithReport
@@ -34,6 +36,7 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
                 foreach (var generateFloor in scene.GetRootGameObjects().SelectMany(x => x.GetComponentsInChildren<GenerateFloor>()))
                 {
                     generateFloor.Generate();
+                    generateFloor.GenerateDates();
                     Object.DestroyImmediate(generateFloor);
                 }
             }
@@ -143,6 +146,32 @@ namespace HistoryOfAvatarOptimizer.ReleaseNoteCard
             {
                 color = Color.white
             };
+        }
+
+        private void GenerateDates()
+        {
+            var epoc = DateTime.Parse(epocDate);
+            var beginDateTime = DateTime.Parse(beginDate);
+            var endDateTime = DateTime.Parse(endDate);
+
+            // for each month from beginDate to endDate
+            var currentDate = beginDateTime;
+            currentDate = new DateTime(currentDate.Year, currentDate.Month, 1).AddMonths(1);
+            
+            while (currentDate <= endDateTime)
+            {
+                var position = (float)(currentDate - epoc).TotalDays * dayLength;
+                var dateName = currentDate.ToString("yyyy/MM/dd");
+
+                var dateObject = Instantiate(datePrefab, transform);
+                dateObject.transform.localPosition = new Vector3(position, 0.01f, 0);
+                dateObject.name = dateName;
+                EditorUtility.SetDirty(dateObject.transform);
+                var textMesh = dateObject.GetComponentInChildren<TMP_Text>();
+                textMesh.text = $"{dateName}";
+                
+                currentDate = currentDate.AddMonths(1);
+            }
         }
 
         private void AddText(string versionName, float position)
