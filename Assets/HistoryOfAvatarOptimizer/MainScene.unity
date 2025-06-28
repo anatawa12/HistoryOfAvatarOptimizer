@@ -2145,11 +2145,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2292020553100792849, guid: 2de6d3bc416a2f143bd454d863308b0c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.135
       objectReference: {fileID: 0}
     - target: {fileID: 2292020553100792849, guid: 2de6d3bc416a2f143bd454d863308b0c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2292020553524072827, guid: 2de6d3bc416a2f143bd454d863308b0c, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2245,11 +2245,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2292020554421244791, guid: 2de6d3bc416a2f143bd454d863308b0c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.135
       objectReference: {fileID: 0}
     - target: {fileID: 2292020554421244791, guid: 2de6d3bc416a2f143bd454d863308b0c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2433552028379510164, guid: 2de6d3bc416a2f143bd454d863308b0c, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -2646,7 +2646,16 @@ PrefabInstance:
 
         QvPen by ureishi
 
-        KineLVideoPlayer by KineL'
+        KineLVideoPlayer by KineL
+
+
+        Related
+        URLs:
+
+        AAO: Avatr Optimizer: https://an12.net/aao
+
+        <size=70%>This
+        world: https://github.com/anatawa12/HistoryOfAvatarOptimizer</size>'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3196,6 +3205,23 @@ PrefabInstance:
     - target: {fileID: 5838261945008720587, guid: 0702ce5d4bbf140d8a0b222555b8becf, type: 3}
       propertyPath: m_Name
       value: description
+      objectReference: {fileID: 0}
+    - target: {fileID: 8287270245786834644, guid: 0702ce5d4bbf140d8a0b222555b8becf, type: 3}
+      propertyPath: m_text
+      value: 'The History of AAO: Avatar Optimizer
+
+
+        This worlds shows summary
+        of the history of
+
+        AAO: Avatar Optimizer by showing all releases.
+
+
+        This
+        world is made as 2 year anniversary since
+
+        first stable release (1.0.0)
+        of AAO: Avatar Optimizer.'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

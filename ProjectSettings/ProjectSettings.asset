@@ -161,7 +161,9 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
+    Android: com.DefaultCompany.HistoryOfAvatarOptimizer
     Standalone: com.DefaultCompany.HistoryOfAvatarOptimizer
+    iPhone: com.DefaultCompany.HistoryOfAvatarOptimizer
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -498,9 +500,9 @@ PlayerSettings:
   - m_BuildTarget: WindowsStandaloneSupport
     m_GraphicsJobs: 1
   - m_BuildTarget: iOSSupport
-    m_GraphicsJobs: 0
+    m_GraphicsJobs: 1
   - m_BuildTarget: AndroidPlayer
-    m_GraphicsJobs: 0
+    m_GraphicsJobs: 1
   m_BuildTargetGraphicsJobMode:
   - m_BuildTarget: PS4Player
     m_GraphicsJobMode: 0
@@ -798,7 +800,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: VRC_SDK_VRCSDK3;UDON;UDONSHARP;UNITY_POST_PROCESSING_STACK_V2
+    Android: VRC_SDK_VRCSDK3;UDON;UDONSHARP;UNITY_POST_PROCESSING_STACK_V2;VRC_ENABLE_PLAYER_PERSISTENCE
     EmbeddedLinux: UNITY_POST_PROCESSING_STACK_V2
     GameCoreXboxOne: UNITY_POST_PROCESSING_STACK_V2
     Nintendo Switch: UNITY_POST_PROCESSING_STACK_V2
@@ -810,7 +812,7 @@ PlayerSettings:
     VisionOS: UNITY_POST_PROCESSING_STACK_V2
     WebGL: UNITY_POST_PROCESSING_STACK_V2
     XboxOne: UNITY_POST_PROCESSING_STACK_V2
-    iPhone: VRC_SDK_VRCSDK3;UDON;UDONSHARP;UNITY_POST_PROCESSING_STACK_V2
+    iPhone: VRC_SDK_VRCSDK3;UDON;UDONSHARP;UNITY_POST_PROCESSING_STACK_V2;VRC_ENABLE_PLAYER_PERSISTENCE
     tvOS: UNITY_POST_PROCESSING_STACK_V2
   additionalCompilerArguments: {}
   platformArchitecture: {}
